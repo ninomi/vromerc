@@ -3,24 +3,20 @@
 " Note: sync with wiki
 
 " Change key mapping in normal mode, please check Vrome Features for available key mapping
-map  j <C-f>
 map  j 10j
 map  k 10k
 
-" Remove key mapping in normal mode
-unmap <C-f>
-
 " Change key mapping in insert mode
-imap <M-h> <M-w>
+"imap <M-h> <M-w>
 
 " Remove key mapping in insert mode
-iunmap <M-w>
+"iunmap <M-w>
 
 " Change hotkey for go next / previous / next 10 / previous 10 matched item in autocomplete
-set autocomplete_prev=<S-Tab>
-set autocomplete_next=<Tab>
-set autocomplete_prev_10=<Up>
-set autocomplete_next_10=<Down>
+"set autocomplete_prev=<S-Tab>
+"set autocomplete_next=<Tab>
+"set autocomplete_prev_10=<Up>
+"set autocomplete_next_10=<Down>
 
 " Rule for next/prev page. (Should written in RegExp)
 set nextpattern+=^NextPage|››$
@@ -36,55 +32,52 @@ set allow_numeric=1
 set editor=gvim -f
 
 " Disable Vrome in those sites, Multiple URLs can be separated with ','
-set disablesites=mail.google.com, reader.google.com // don't run Vrome in those sites
+set disablesites=www.google.co.jp, www.google.com, mail.google.com, reader.google.com // don't run Vrome in those sites
 
 " Define search engines. the value should be valid json looks like below.
 " Please remember the first searchengine is the default one. in the below one, it is google
 set searchengines={"google":"http://www.google.com/search?q={{keyword}}", "yahoo":"http://search.yahoo.com/search?p={{keyword}}","wikipedia":"http://en.wikipedia.org/wiki/{{keyword}}","answers":"http://www.answers.com/main/ntquery?s={{keyword}}","yubnub":"http://yubnub.org/parser/parse?command={{keyword}}"}
 
-" You could also add some new searchengines without overwrite build in.
-set searchengines+={"baidu":"http://www.baidu.com/s?wd={{keyword}}"}
-
 " Change default search engine, default is google.
-set defaultsearch=yahoo
+set defaultsearch=google
 
 " Disable autocomplete
-set noautocomplete
+"set noautocomplete
 
 " Change enable vrome keybinding, default is <C-Esc>
-set enable_vrome_key=<Esc>
+"set enable_vrome_key=<Esc>
 
 " The server port is what external server running on
 " The external server is used to support launch the external editor in insert mode.
 " Please refer "Support External Editor" https://github.com/jinzhu/vrome/wiki/Support-External-Editor for more
-set server_port=20000
+"set server_port=20000
 
 " Set your hintkeys instead of the default 0123456789
 set hintkeys=jlkhfsdagwerui
 
 " Alternative: creates two sets of hint keys separated by a semicolon. First set uses keys close to the home row to create combinations, second set is used as a last resort
 " Note: this trigger the smart sorting in multi mode. Matching elements by level of similarity
-set hintkeys=dsafrewq,tgjx
+"set hintkeys=dsafrewq,tgjx
 
 " overwrites the sub actions by your own set of actions
-set hint_actions={"`": "[", ",": "{"}
+"set hint_actions={"`": "[", ",": "{"}
 
 " by default, hints use numbers. You can have both numbers AND strings (view custom JS below). Or you can use strings only as hints and overwrite the number commands
-set useletters=1
+"set useletters=1
 
 " add custom quick marks
-set qm_e=chrome://extensions
-set qm_p=chrome://plugins
-set qm_u=chrome://chrome-urls
+" set qm_e=chrome://extensions
+" set qm_p=chrome://plugins
+" set qm_u=chrome://chrome-urls
 " custom quick marks longer than one key
-set qm_hn=http://news.ycombinator.com
+" set qm_hn=http://news.ycombinator.com
 " custom quick mark triggering JS (view below)
-set qm_r=::javascript::CustomMark.readLater();
+" set qm_r=::javascript::CustomMark.readLater();
 
 " load a custom css file into chrome  -- server must be enabled. Toggle betwen custom css file and default chrome look using `Sd`
-set chrome_custom_css_file=/home/user/files/custom.css
+" set chrome_custom_css_file=/home/user/files/custom.css
 " also accepts URLs  (ccc_file = chrome_custom_css_file)
-set ccc_file=http://voeb.ca/dark.css
+" set ccc_file=http://voeb.ca/dark.css
 
 " begin_custom_js
 " // in case you have a frontendExec in a remote file + a frontendExec in your local filesystem. This way, they don't overwrite each other
