@@ -20,9 +20,9 @@ set autocomplete_prev_10=<Up>
 set autocomplete_next_10=<Down>
 
 " Rule for next/prev page. (Should written in RegExp)
-"set nextpattern+=^NextPage|>|>>|次へ
-set nextpattern=['次(の|へ)?(ページ)?', '^Next(Page)?$', '^>>$', '^>$']
-set previouspattern+=^PrevPage|<|>>|前へ
+"set nextpattern+=^NextPage|>|>>|谺｡縺ｸ
+set nextpattern=['谺｡(縺ｮ|縺ｸ)?(繝壹�ｼ繧ｸ)?', '^Next(Page)?$', '^>>$', '^>$']
+set previouspattern+=^PrevPage|<|>>|蜑阪∈
 
 " set no status line -- i.e keys don't show as you type. enabled by default
 set showstatus=0
