@@ -6,6 +6,7 @@
 unmap j
 unmap k
 map d D
+"map d D
 
 " Change key mapping in insert mode
 "imap <M-h> <M-w>
