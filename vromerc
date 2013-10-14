@@ -5,7 +5,7 @@
 " Change key mapping in normal mode, please check Vrome Features for available key mapping
 unmap j
 unmap k
-map d D
+"map d D
 
 " Change key mapping in insert mode
 "imap <M-h> <M-w>
@@ -20,8 +20,8 @@ set autocomplete_prev_10=<Up>
 set autocomplete_next_10=<Down>
 
 " Rule for next/prev page. (Should written in RegExp)
-"set nextpattern+=^NextPage|>|>>|次へ
-set nextpattern=['次(の|へ)?(ページ)?', '^Next(Page)?$', '^>>$', '^>$']
+set nextpattern+=^Next|NextPage|>|>>|次へ$
+"set nextpattern=['次(の|へ)?(ページ)?', '^Next(Page)?$', '^>>$', '^>$']
 set previouspattern+=^PrevPage|<|>>|前へ
 
 " set no status line -- i.e keys don't show as you type. enabled by default
